@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+
+{% block title %}Cocina{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/_MG_3652.JPG' %}{% endblock %}
+
+
+{% block headers %}
+<h1>Banqueteria</h1>
+<!--<span class="subheading">Reconocida Cocinera</span>-->
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid avatar" src="{% static 'core/img/canape_bodadillo.jpg' %}" alt="">
+    </div>
+    <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading">Canape Bocadillo</h2>
+        <p> Sanguchito </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates
+            odit...</p>
+    </div>
+</div>
+{% endblock %}

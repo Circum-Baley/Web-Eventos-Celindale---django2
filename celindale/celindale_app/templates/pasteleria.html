@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+
+{% block title %}Pasteleria{% endblock %}
+
+
+{% block background %}{% load static %}{% static 'core/img/pasteleria.jpg' %}{% endblock %}
+
+{% block headers %}
+<h1>Pasteleria</h1>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="pasteles" src="{% static 'core/img/pasteles.jpg/' %}" alt="">
+    </div>
+</div>
+
+<div class="col-lg-7 col-md-8">
+    <h2 class="section-heading title">Pastelitos Caseros</h2>
+    <p>holaaaaaaaaaaaaaaaa</p>
+</div>
+{% endblock %}

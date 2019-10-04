@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+
+{% block title %}Menu{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/menu_html.jpg' %}{% endblock %}
+
+{% block headers %}
+<!--<h1>Menu</h1>-->
+<!--<span class="subheading">Menu</span>-->
+{% endblock %}
+
+{% block content %}
+<!--Consigue la ruta del primer objeto en la base de datos-->
+<!--{{menus}}-->
+<!--por que viene en pĺural-->
+{% for menus in menus %}
+
+<div class="row project">
+    <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid" src="{{menus.image.url}}" alt="">
+    </div>
+    <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading title">{{menus.title}}</h2>
+        <p>{{menus.descripcion}}</p>
+        {% if menu.title %}
+        <p><a href="{{menus.title}}">Más información</a></p>
+        {% endif %}
+        {% if menus.link != null %}
+        <h1><a href="{{menus.link}}">Enlace Pastelitos</a></h1>
+        {% else %}
+        <h5>Sin Vinculo</h5>
+        {% endif %}
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}
